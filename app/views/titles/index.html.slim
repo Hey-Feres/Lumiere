@@ -1,0 +1,15 @@
+h1 Title 
+h1= link_to '+', new_title_path
+
+- @titles.each do |title|
+  = image_tag(title.file.thumb.url, alt: 'Video') if title.file?
+
+/      tr
+        td = title.title
+        td = title.file
+        td = title.resume
+        td = title.duration
+        td = link_to 'Show', title
+        td = link_to 'Edit', edit_title_path(title)
+        td = link_to 'Destroy', title, data: { confirm: 'Are you sure?' }, method: :delete
+

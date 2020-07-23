@@ -1,0 +1,17 @@
+p#notice= notice
+p
+  strong Title:
+  = @title.title
+p
+  strong File:
+  video#player controls="" src="#{@title.file}"
+= link_to 'Edit', edit_title_path(@title)
+| \
+= link_to 'Back', titles_path
+
+css:
+	#player{
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+	}
