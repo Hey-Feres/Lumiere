@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TitlesController < ApplicationController
   before_action :set_title, only: [:show, :edit, :update, :destroy]
 
